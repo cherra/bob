@@ -1,0 +1,315 @@
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://opensource.org/licenses/mit-license.php	*/
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+
+
+/* Selection colours (easy to forget) */
+
+/*::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}*/
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {/*-webkit-tap-highlight-color: rgb(255,255,158);*/}
+
+.label{
+    width: 100px;
+    float: left;
+    margin-top: 5px;
+}
+
+.tabla-listado{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.tabla-captura{
+    width: 60%;
+    padding: 0;
+}
+
+.tabla-captura input[type=text], .tabla-captura input[type=email], .tabla-captura select{
+    width: 70%;
+}
+
+.tabla-filtros{
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.tabla-filtros .filtro-titulo{
+    text-align: center;
+}
+
+.tabla-filtros .filtro-nombre{
+    width: 30%;
+}
+
+.tabla-filtros .filtro-dato{
+    width: 70%;
+}
+
+td{
+    padding: 1px;
+}
+
+input[type=checkbox]{
+    /*height: 13px;*/
+    height: 1em;
+    margin-left: 0.5em;
+}
+
+.columna{
+    float: left;
+    width: 48%;
+    padding: 0 1%;
+}
+
+#top .ui-button-text-only .ui-button-text { padding: .4em 1em; }
+#contenido .ui-button-text-only .ui-button-text { padding: 0 1em; }
+
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+        font: 70% "Trebuchet MS", sans-serif; 
+        /*margin: 50px;*/
+	width: 992px;
+	padding: 0;
+	/*background: rgb(232,232,232);*/
+	/*color: rgb(60,60,60);*/
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+html{
+    overflow-x: hidden;
+}
+
+#contenido{
+    width: 952px;
+    padding: 10px 20px;
+}
+
+#top{
+    width: 992px;
+}
+
+#breadcrumb, #title{
+    margin: 5px 0 0 20px;
+}
+
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		width: 768px;
+		padding: 0;
+	}
+        
+        .tabla-filtros{
+            width: 50%;
+            margin-bottom: 7px;
+        }
+
+        #contenido{
+            width: 728px;
+            padding: 10px 20px;
+        }
+
+        #top{
+            width: 768px;
+        }
+        
+        .tabla-captura{
+            width: 80%;
+            padding: 0;
+        }
+
+        .tabla-captura input[type=text], .tabla-captura input[type=email], .tabla-captura select{
+            width: 80%;
+        }
+        
+        /*tr,input[type=text], input[type=email], select{
+            height: 20px;
+        }*/
+        
+        button, input[type=button], input[type=submit]{
+            height: 25px;
+        }
+        
+        #contenido .ui-button-text-only .ui-button-text { padding: 0.2em 0.8em; }
+
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+/*@media only screen and (max-width: 767px) {
+	
+	body {
+		width: 320px;
+		padding: 0;
+	}
+        input{
+            width: 120px;
+        }
+        
+        #contenido{
+            width: 202px;
+            padding: 10px 20px;
+        }
+
+        #topbar{
+            width: 222px;
+        }
+	
+}
+*/
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		width: 480px;
+		padding: 0;
+	}
+        
+        .tabla-filtros{
+            width: 80%;
+            margin-bottom: 7px;
+        }
+        
+        .tabla-captura{
+            width: 100%;
+            padding: 0;
+        }
+
+        .tabla-captura input[type=text], .tabla-captura input[type=email], .tabla-captura select{
+            width: 80%;
+        }
+	
+        #contenido{
+            width: 440px;
+            padding: 10px 20px;
+        }
+
+        #top{
+            width: 480px;
+        }
+        
+        tr, button, input[type=button], input[type=submit]{
+            height: 30px;
+        }
+        
+        /*input[type=text], input[type=email], select{
+            height: 22px;
+        }*/
+        
+        #contenido .ui-button-text-only .ui-button-text { padding: 0.3em 0.6em; }
+        
+        .columna{
+            width: 100%;
+        }
+        
+        .label{
+            width: 75px;
+        }
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+/*@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	body {
+            
+            padding: 50px;
+	}
+	
+}*/
+
+@media print {
+	
+        #contenido{
+            width: 100% !important;
+            margin-left: 0 !important;
+            padding: 10px 10px !important;
+        }
+        
+        .fila-alterna{
+            background: #666666 !important;
+        }
+        
+        td{
+            border-bottom: 1px solid #dddddd !important;
+        }
+        
+        #menu, #top{
+            display: none !important;
+        }
+        
+        button, a{
+            display: none !important;
+        }
+}

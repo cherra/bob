@@ -1,0 +1,21 @@
+.fila-alterna{
+    background: #eeeeee;
+}
+
+.tabla-listado.tabla-seleccionable tr:hover{
+    cursor: pointer;
+    background: #eeeeee;
+}
+
+/* error message for validator*/
+.error{
+    background-color: #ffe9e9;
+}
+
+.fecha, .hora{
+    width: 6.5em;
+}
+
+.fecha, .hora{
+    height: 1.4em;
+}
