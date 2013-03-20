@@ -20,6 +20,10 @@ class Inventarios extends CI_Controller{
         
         $this->load->view('informe/inventario/existencia',$data);
     }
+    
+    public function movimientos_articulos(){
+        
+    }
 }
 
 ?>
