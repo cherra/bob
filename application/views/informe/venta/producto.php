@@ -73,7 +73,7 @@
             <td style="width: 40%;">Producto</td>
             <td style="width: 10%;" align="right">Cant.</td>
             <td style="width: 10%;" align="right">Importe</td>
-            <td style="width: 10%;" align="right">Costo</td>
+            <!-- <td style="width: 10%;" align="right">Costo</td> -->
             <td style="width: 10%;">&nbsp;</td>
         </tr>
         <?php
@@ -89,7 +89,7 @@
             <td><?php echo $venta->NAME; ?></td>
             <td align="right"><?php echo number_format($venta->UNITS,2); ?></td>
             <td align="right"><?php echo '$'.number_format($venta->PRICESELL,2); ?></td>
-            <td align="right"><?php echo '$'.number_format($venta->PRICEBUY,2); ?></td>
+            <!-- <td align="right"><?php echo '$'.number_format($venta->PRICEBUY,2); ?></td> -->
             <td align="center">
                 <?php echo anchor('ventas/informes/detalle/'.$venta->ID, 'Ver','class="button"'); ?>
             </td>
@@ -104,7 +104,7 @@
             <td colspan="3" align="right">TOTAL</td>
             <td align="right" style="font-weight: bold;"><?php echo number_format($total_piezas,2); ?></td>
             <td align="right" style="font-weight: bold;"><?php echo '$'.number_format($total_importe,2); ?></td>
-            <td align="right" style="font-weight: bold;"><?php echo '$'.number_format($total_costo,2); ?></td>
+            <!-- <td align="right" style="font-weight: bold;"><?php echo '$'.number_format($total_costo,2); ?></td> -->
             <td>&nbsp;</td>
         </tr>
         <?php
