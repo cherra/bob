@@ -8,7 +8,7 @@ class Venta extends CI_Model {
     
     public function producto($producto = null, $categoria = null, $proveedor = null, $sucursal = null, $fecha_inicio = null, $fecha_fin = null){
         if(!empty($fecha_inicio)){
-            $this->db->select('PRODUCTS.ID, PRODUCTS.CODE, PRODUCTS.REFERENCE, PRODUCTS.NAME, SUM(TICKETLINES.UNITS) AS UNITS, SUM(TICKETLINES.PRICE) AS PRICESELL, PRODUCTS.PRICEBUY * SUM(TICKETLINES.UNITS) AS PRICEBUY');
+            $this->db->select('PRODUCTS.ID, PRODUCTS.CODE, PRODUCTS.REFERENCE, PRODUCTS.NAME, SUM(TICKETLINES.UNITS) AS UNITS, SUM(TICKETLINES.PRICE * TICKETLINES.UNITS) AS PRICESELL, PRODUCTS.PRICEBUY * SUM(TICKETLINES.UNITS) AS PRICEBUY');
             $this->db->from('PRODUCTS');
             $this->db->join('CATEGORIES','PRODUCTS.CATEGORY = CATEGORIES.ID');
             $this->db->join('TICKETLINES','PRODUCTS.ID = TICKETLINES.PRODUCT');
@@ -39,7 +39,7 @@ class Venta extends CI_Model {
     
     public function categoria($proveedor = null, $sucursal = null, $fecha_inicio = null, $fecha_fin = null){
         if(!empty($fecha_inicio)){
-            $this->db->select('CATEGORIES.ID, CATEGORIES.NAME, SUM(TICKETLINES.UNITS) AS UNITS, SUM(TICKETLINES.PRICE) AS PRICESELL, SUM(PRODUCTS.PRICEBUY * TICKETLINES.UNITS) AS PRICEBUY');
+            $this->db->select('CATEGORIES.ID, CATEGORIES.NAME, SUM(TICKETLINES.UNITS) AS UNITS, SUM(TICKETLINES.PRICE * TICKETLINES.UNITS) AS PRICESELL, SUM(PRODUCTS.PRICEBUY * TICKETLINES.UNITS) AS PRICEBUY');
             $this->db->from('CATEGORIES');
             $this->db->join('PRODUCTS', 'CATEGORIES.ID = PRODUCTS.CATEGORY');
             $this->db->join('TICKETLINES','PRODUCTS.ID = TICKETLINES.PRODUCT');
