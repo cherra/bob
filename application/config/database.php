@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'bijou';
-$db['default']['password'] = 'bjmatica2012';
+$db['default']['username'] = 'cherra';
+$db['default']['password'] = 'cherra3003';
 $db['default']['database'] = 'bijou';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
